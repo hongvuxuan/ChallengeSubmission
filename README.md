@@ -62,10 +62,10 @@ I have added these two tests into single projects so that you can just build and
 
 ### Preview
 
-Video
+#### Video
 ![preview](app_preview.mov)
 
-Screenshots
+#### Screenshots
 
 ![preview](app_main.png)
 
@@ -79,7 +79,7 @@ Screenshots
 
 ![preview](codingtest_details.png)
 
-UnitTests
+#### UnitTests
 
 ![preview](project_unittest_sample.png)
 
