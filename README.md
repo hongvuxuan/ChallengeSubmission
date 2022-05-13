@@ -63,7 +63,7 @@ I have added these two tests into single projects so that you can just build and
 ### Preview
 
 #### Video
-![preview](app_preview.mov)
+![preview](app_preview.gif)
 
 #### Screenshots
 
