@@ -48,20 +48,14 @@ I have added these two tests into single projects so that you can just build and
 - Main App
 - Module VIPER
 - Module LogicTest
-    |- Interactor unit test
 - Module CodingTest
 
 ![preview](project_struct.png)
 
-![preview](project_unittest_sample.png)
-
-![preview](project_unittest_sample_1.png)
-
-
 ### Design pattern
 - [ ] Modularization Architecture
 - [ ] VIPER
-- [ ] Unit test
+- [ ] UnitTests
 
 ### Libraries
 - [Kingfisher] (https://github.com/onevcat/Kingfisher)
@@ -69,3 +63,7 @@ I have added these two tests into single projects so that you can just build and
 ### Preview
 
 ![preview](app_preview.mov)
+
+![preview](project_unittest_sample.png)
+
+![preview](project_unittest_sample_1.png)
