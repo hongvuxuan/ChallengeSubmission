@@ -62,8 +62,26 @@ I have added these two tests into single projects so that you can just build and
 
 ### Preview
 
+Video
 ![preview](app_preview.mov)
+
+Screenshots
+
+![preview](app_main.png)
+
+![preview](logictest_main.png)
+
+![preview](logictest_func1.png)
+
+![preview](logictest_func2.png)
+
+![preview](codingtest_main.png)
+
+![preview](codingtest_details.png)
+
+UnitTests
 
 ![preview](project_unittest_sample.png)
 
 ![preview](project_unittest_sample_1.png)
+
