@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		47E2C40399B35960BDAD37BA /* Pods_HongVu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D882B36B42186EFCEBF46FB6 /* Pods_HongVu.framework */; };
+		F1C080A4282BB2E100FECB3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C080A3282BB2E100FECB3A /* AppDelegate.swift */; };
+		F1C080A6282BB2E100FECB3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C080A5282BB2E100FECB3A /* SceneDelegate.swift */; };
+		F1C080A8282BB2E100FECB3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C080A7282BB2E100FECB3A /* ViewController.swift */; };
+		F1C080AB282BB2E100FECB3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1C080A9282BB2E100FECB3A /* Main.storyboard */; };
+		F1C080AD282BB2E200FECB3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1C080AC282BB2E200FECB3A /* Assets.xcassets */; };
+		F1C080B0282BB2E200FECB3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1C080AE282BB2E200FECB3A /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0D49F6B6EBB10F4AC179FEA6 /* Pods-HongVuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HongVuTests.release.xcconfig"; path = "Target Support Files/Pods-HongVuTests/Pods-HongVuTests.release.xcconfig"; sourceTree = "<group>"; };
+		0DB6CB677BE557F6E34C99FD /* Pods-HongVu-HongVuUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HongVu-HongVuUITests.release.xcconfig"; path = "Target Support Files/Pods-HongVu-HongVuUITests/Pods-HongVu-HongVuUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5F9D3578CF7A31FCDB880EE7 /* Pods-HongVu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HongVu.debug.xcconfig"; path = "Target Support Files/Pods-HongVu/Pods-HongVu.debug.xcconfig"; sourceTree = "<group>"; };
+		76EB5AD9B9BF5CB333856A00 /* Pods-HongVuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HongVuTests.debug.xcconfig"; path = "Target Support Files/Pods-HongVuTests/Pods-HongVuTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A3E2557297471063DB453A9E /* Pods_HongVuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HongVuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B32BEA46E780929AC1ABA9AA /* Pods_HongVu_HongVuUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HongVu_HongVuUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEBB7E397354D0F552C19ABD /* Pods-HongVu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HongVu.release.xcconfig"; path = "Target Support Files/Pods-HongVu/Pods-HongVu.release.xcconfig"; sourceTree = "<group>"; };
+		C0D63FA83F309BBC5D426203 /* Pods-HongVu-HongVuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HongVu-HongVuUITests.debug.xcconfig"; path = "Target Support Files/Pods-HongVu-HongVuUITests/Pods-HongVu-HongVuUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D882B36B42186EFCEBF46FB6 /* Pods_HongVu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HongVu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1C080A0282BB2E100FECB3A /* HongVu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HongVu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1C080A3282BB2E100FECB3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F1C080A5282BB2E100FECB3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F1C080A7282BB2E100FECB3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F1C080AA282BB2E100FECB3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F1C080AC282BB2E200FECB3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1C080AF282BB2E200FECB3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F1C080B1282BB2E200FECB3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1F31863282DA16100498247 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F1C0809D282BB2E100FECB3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47E2C40399B35960BDAD37BA /* Pods_HongVu.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		678886CCD99C343198796DC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1F31863282DA16100498247 /* XCTest.framework */,
+				D882B36B42186EFCEBF46FB6 /* Pods_HongVu.framework */,
+				B32BEA46E780929AC1ABA9AA /* Pods_HongVu_HongVuUITests.framework */,
+				A3E2557297471063DB453A9E /* Pods_HongVuTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1C08097282BB2E100FECB3A = {
+			isa = PBXGroup;
+			children = (
+				F1C080A2282BB2E100FECB3A /* HongVu */,
+				F1C080A1282BB2E100FECB3A /* Products */,
+				F96E286801454A05D85DE4A3 /* Pods */,
+				678886CCD99C343198796DC0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F1C080A1282BB2E100FECB3A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1C080A0282BB2E100FECB3A /* HongVu.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F1C080A2282BB2E100FECB3A /* HongVu */ = {
+			isa = PBXGroup;
+			children = (
+				F1C080A3282BB2E100FECB3A /* AppDelegate.swift */,
+				F1C080A5282BB2E100FECB3A /* SceneDelegate.swift */,
+				F1C080A7282BB2E100FECB3A /* ViewController.swift */,
+				F1C080A9282BB2E100FECB3A /* Main.storyboard */,
+				F1C080AC282BB2E200FECB3A /* Assets.xcassets */,
+				F1C080AE282BB2E200FECB3A /* LaunchScreen.storyboard */,
+				F1C080B1282BB2E200FECB3A /* Info.plist */,
+			);
+			path = HongVu;
+			sourceTree = "<group>";
+		};
+		F96E286801454A05D85DE4A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F9D3578CF7A31FCDB880EE7 /* Pods-HongVu.debug.xcconfig */,
+				BEBB7E397354D0F552C19ABD /* Pods-HongVu.release.xcconfig */,
+				C0D63FA83F309BBC5D426203 /* Pods-HongVu-HongVuUITests.debug.xcconfig */,
+				0DB6CB677BE557F6E34C99FD /* Pods-HongVu-HongVuUITests.release.xcconfig */,
+				76EB5AD9B9BF5CB333856A00 /* Pods-HongVuTests.debug.xcconfig */,
+				0D49F6B6EBB10F4AC179FEA6 /* Pods-HongVuTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F1C0809F282BB2E100FECB3A /* HongVu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1C080CA282BB2E200FECB3A /* Build configuration list for PBXNativeTarget "HongVu" */;
+			buildPhases = (
+				820ABBD719A1ECBC7E99248B /* [CP] Check Pods Manifest.lock */,
+				F1C0809C282BB2E100FECB3A /* Sources */,
+				F1C0809D282BB2E100FECB3A /* Frameworks */,
+				F1C0809E282BB2E100FECB3A /* Resources */,
+				83C6FFD3EBC0C6CBFD0D1044 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HongVu;
+			productName = HongVu;
+			productReference = F1C080A0282BB2E100FECB3A /* HongVu.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F1C08098282BB2E100FECB3A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					F1C0809F282BB2E100FECB3A = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = F1C0809B282BB2E100FECB3A /* Build configuration list for PBXProject "HongVu" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F1C08097282BB2E100FECB3A;
+			productRefGroup = F1C080A1282BB2E100FECB3A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1C0809F282BB2E100FECB3A /* HongVu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F1C0809E282BB2E100FECB3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1C080B0282BB2E200FECB3A /* LaunchScreen.storyboard in Resources */,
+				F1C080AD282BB2E200FECB3A /* Assets.xcassets in Resources */,
+				F1C080AB282BB2E100FECB3A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		820ABBD719A1ECBC7E99248B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HongVu-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83C6FFD3EBC0C6CBFD0D1044 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HongVu/Pods-HongVu-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HongVu/Pods-HongVu-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HongVu/Pods-HongVu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F1C0809C282BB2E100FECB3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1C080A8282BB2E100FECB3A /* ViewController.swift in Sources */,
+				F1C080A4282BB2E100FECB3A /* AppDelegate.swift in Sources */,
+				F1C080A6282BB2E100FECB3A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F1C080A9282BB2E100FECB3A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1C080AA282BB2E100FECB3A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F1C080AE282BB2E200FECB3A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1C080AF282BB2E200FECB3A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F1C080C8282BB2E200FECB3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F1C080C9282BB2E200FECB3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F1C080CB282BB2E200FECB3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F9D3578CF7A31FCDB880EE7 /* Pods-HongVu.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HongVu/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.savvycom.HongVu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F1C080CC282BB2E200FECB3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEBB7E397354D0F552C19ABD /* Pods-HongVu.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HongVu/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.savvycom.HongVu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F1C0809B282BB2E100FECB3A /* Build configuration list for PBXProject "HongVu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1C080C8282BB2E200FECB3A /* Debug */,
+				F1C080C9282BB2E200FECB3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1C080CA282BB2E200FECB3A /* Build configuration list for PBXNativeTarget "HongVu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1C080CB282BB2E200FECB3A /* Debug */,
+				F1C080CC282BB2E200FECB3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F1C08098282BB2E100FECB3A /* Project object */;
+}

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Test1ViewController" customModule="LogicTest" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="uRb-j9-AyL" id="M1J-98-hzH"/>
+                <outlet property="resultLabel" destination="4Lo-ve-ZYe" id="rLu-lf-jId"/>
+                <outlet property="textField" destination="wCK-59-Mgw" id="9wi-oK-dSM"/>
+                <outlet property="textFieldTitle" destination="l1B-uo-qm2" id="Jz5-g7-9br"/>
+                <outlet property="textView" destination="7uy-UB-8PW" id="qpJ-W5-EwT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wCK-59-Mgw">
+                    <rect key="frame" x="20" y="324.5" width="374" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="09O-J3-kYI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="yKx-91-nmf"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRb-j9-AyL">
+                    <rect key="frame" x="149.5" y="379.5" width="115" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="Zm8-zT-p0N"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Find the index"/>
+                    <connections>
+                        <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="5AV-Q4-olu"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Lo-ve-ZYe">
+                    <rect key="frame" x="15" y="474.5" width="384" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7uy-UB-8PW">
+                    <rect key="frame" x="20" y="64" width="374" height="200"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="GUD-72-IPb"/>
+                    </constraints>
+                    <mutableString key="text">Please write a function to find the index that has the sum of left’s elements equal to the sum of right’s elements . 
+Example 1: input =&gt; [1, 3, 5, 7, 9] output =&gt; “middle index is 3” 
+Example 2: input =&gt; [3, 6, 8, 1, 5, 10, 1, 7] output =&gt; “middle index is 4”  Example 3: input =&gt; [3, 5, 6] output =&gt; “index not found”</mutableString>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your array of the numbers" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1B-uo-qm2">
+                    <rect key="frame" x="20" y="294" width="374" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="l1B-uo-qm2" firstAttribute="trailing" secondItem="wCK-59-Mgw" secondAttribute="trailing" id="4Ac-h0-jZy"/>
+                <constraint firstItem="7uy-UB-8PW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="7Ip-ZT-BJi"/>
+                <constraint firstItem="4Lo-ve-ZYe" firstAttribute="top" secondItem="uRb-j9-AyL" secondAttribute="bottom" constant="50" id="AFE-xa-HAJ"/>
+                <constraint firstItem="4Lo-ve-ZYe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="EvN-JE-Nbd"/>
+                <constraint firstItem="l1B-uo-qm2" firstAttribute="leading" secondItem="wCK-59-Mgw" secondAttribute="leading" id="FRy-EJ-Qmx"/>
+                <constraint firstItem="4Lo-ve-ZYe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IIQ-dj-aT8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wCK-59-Mgw" secondAttribute="trailing" constant="20" id="Nqu-ia-0dl"/>
+                <constraint firstItem="uRb-j9-AyL" firstAttribute="top" secondItem="wCK-59-Mgw" secondAttribute="bottom" constant="20" id="OvQ-Fn-otM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7uy-UB-8PW" secondAttribute="trailing" constant="20" id="R6x-mB-rKJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Lo-ve-ZYe" secondAttribute="trailing" constant="15" id="VxT-iW-m7R"/>
+                <constraint firstItem="7uy-UB-8PW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="WY2-PG-Cjk"/>
+                <constraint firstItem="l1B-uo-qm2" firstAttribute="top" secondItem="7uy-UB-8PW" secondAttribute="bottom" constant="30" id="XJc-uS-Mdj"/>
+                <constraint firstItem="wCK-59-Mgw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="bhy-mx-bjq"/>
+                <constraint firstItem="wCK-59-Mgw" firstAttribute="top" secondItem="l1B-uo-qm2" secondAttribute="bottom" constant="10" id="czP-zP-T2a"/>
+                <constraint firstItem="uRb-j9-AyL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ufP-wL-fUj"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

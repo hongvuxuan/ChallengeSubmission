@@ -1,0 +1,18 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '12.0'
+
+workspace 'HongVu.xcworkspace'
+project 'HongVu.xcodeprj'
+
+target 'HongVu' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for HongVu
+  pod 'VIPER', :path => 'Modules/VIPER'
+  pod 'LogicTest', :path => 'Modules/LogicTest', :testspecs => ['Tests']
+  pod 'CodingTest', :path => 'Modules/CodingTest', :testspecs => ['Tests']
+  
+  pod 'Kingfisher', '~> 4.7.0'
+
+end
