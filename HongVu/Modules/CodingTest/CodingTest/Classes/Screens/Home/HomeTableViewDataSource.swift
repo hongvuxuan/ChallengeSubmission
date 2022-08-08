@@ -38,6 +38,7 @@ extension HomeTableViewDataSource: TableViewItemDataSource {
         cell.title?.text = article.title
         cell.shortDetailsLable?.text = article.description
         cell.thumnailImageView?.downloadImageWithCaching(with: article.urlToImage ?? "", placeholderImage: nil)
+        cell.timestampLabel?.text = article.getPublishedAtString()
         return cell
     }
     
