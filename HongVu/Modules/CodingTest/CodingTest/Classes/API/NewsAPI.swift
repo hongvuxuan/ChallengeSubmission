@@ -12,28 +12,91 @@ struct NewsAPI {
     private static var baseURL = "https://newsapi.org/"
     private static var apiKey = "96b3b5505731463899cd409a2f68dc71"
     
+    private static var countriesSupported = ["ae", "ar", "at", "au", "be", "bg", "br", "ca", "ch", "cn", "co", "cu", "cz", "de", "eg", "fr", "gb", "gr", "hk", "hu", "id", "ie", "il", "in", "it", "jp", "kr", "lt", "lv", "ma", "mx", "my", "ng", "nl", "no", "nz", "ph", "pl", "pt", "ro", "rs", "ru", "sa", "se", "sg", "si", "sk", "th", "tr", "tw", "ua", "us", "ve", "za"]
+    
+    enum CategoriesSupported: String, CaseIterable {
+        case business
+        case entertainment
+        case general
+        case health
+        case science
+        case sports
+        case technology
+        
+        var name: String {
+            switch self {
+            case .business:
+                return "Business"
+            case .entertainment:
+                return "Entertainment"
+            case .general:
+                return "General"
+            case .health:
+                return "Health"
+            case .science:
+                return "Science"
+            case .sports:
+                return "Sports"
+            case .technology:
+                return "Technology"
+            }
+        }
+    }
+    
+    private static var languagesSupported = ["ar", "de", "en", "es", "fr", "he", "it", "nl", "no", "pt", "ru", "sv", "ud", "zh"]
+    
+    enum SortBySupported: String, CaseIterable {
+        case relevancy
+        case popularity
+        case publishedAt
+    }
+    
     struct ArticlesRequest: Request {
+        
+        enum EndPointType {
+            case topHeadlines(category: CategoriesSupported.RawValue, country: String, q: String?, pageSize: Int, page: Int)
+            case everything(q: String?, pageSize: Int, page: Int)
+        }
+        
+        let endpointType: EndPointType
+        
         var url: String {
-            return baseURL + "v2/everything?"
+            switch endpointType {
+            case .topHeadlines(_, _, _, _, _):
+                return baseURL + "v2/top-headlines?"
+            case .everything:
+                return baseURL + "v2/everything?"
+            }
         }
         let apiKey: String = NewsAPI.apiKey
-        let q: String
-        let from: String
-        let to: String
+//        let q: String
+//        let from: String
+//        let to: String
         let sortBy: String = "popularity"
-        let pageSize: Int
-        let page: Int
+//        let pageSize: Int
+//        let page: Int
         
         func params() -> [(key: String, value: String)] {
-            return [
-                (key: "apiKey", value: apiKey),
-                (key: "q", value: q),
-                (key: "from", value: from),
-                (key: "to", value: to),
-                (key: "sortBy", value: sortBy),
-                (key: "pageSize", value: "\(pageSize)"),
-                (key: "page", value: "\(page)"),
-            ]
+            switch endpointType {
+            case .topHeadlines(let category, let country, let q, let pageSize, let page):
+                return [
+                    (key: "apiKey", value: apiKey),
+                    (key: "category", value: category),
+                    (key: "country", value: country),
+                    (key: "pageSize", value: "\(pageSize)"),
+                    (key: "page", value: "\(page)"),
+                ]
+            case .everything(let q, let pageSize, let page):
+                return [
+                    (key: "apiKey", value: apiKey),
+                    (key: "q", value: q ?? ""),
+                    //(key: "from", value: from),
+                    //(key: "to", value: to),
+                    (key: "sortBy", value: "popularity"),
+                    (key: "pageSize", value: "\(pageSize)"),
+                    (key: "page", value: "\(page)"),
+                ]
+            }
         }
     }
     

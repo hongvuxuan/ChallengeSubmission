@@ -30,8 +30,23 @@ extension HomePresenter: HomeViewOutputs {
     
     func viewDidLoad() {
         view.configure(entities: entities)
-        entities.articlesAPIState.isFetching = true
-        dependencies.interactor.fetchArticles(keyword: "apple", page: entities.articlesAPIState.pageCount)
+        
+        onReachBottom()
+    }
+    
+    func openCategory() {
+        dependencies.interactor.fetchCategories()
+    }
+    
+    func selectCategory(_ category: NewsAPI.CategoriesSupported) {
+        entities.category = category
+        
+        entities.articlesRepositories = []
+        entities.articlesAPIState.pageCount = 1
+        
+        view.reloadTableView(tableViewDataSource: HomeTableViewDataSource(entities: entities, presenter: self))
+        
+        onReachBottom()
     }
     
     func onItemSelected(at indexPath: IndexPath) {
@@ -43,12 +58,26 @@ extension HomePresenter: HomeViewOutputs {
             return
         }
         entities.articlesAPIState.isFetching = true
-        dependencies.interactor.fetchArticles(keyword: "apple", page: entities.articlesAPIState.pageCount)
+        dependencies.interactor.fetchArticles(.topHeadlines(category: entities.category.rawValue,
+                                                            country: "us",
+                                                            q: nil,
+                                                            pageSize: 10,
+                                                            page: entities.articlesAPIState.pageCount))
         view.indicatorView(animate: true)
     }
 }
 
 extension HomePresenter: HomeInteractorOutputs {
+    
+    func fetchCategoryOnSuccess(_ categories: [NewsAPI.CategoriesSupported]) {
+        var categoryItems = [HomeEntities.Category]()
+        for category in categories {
+            let selected = category == entities.category
+            let categoryItem = HomeEntities.Category(type: category, selected: selected)
+            categoryItems.append(categoryItem)
+        }
+        view.reloadCategories(categoryItems)
+    }
     
     func fetchArticlesOnSuccess(_ response: ArticlesRepositoriesResponse) {
         entities.articlesAPIState.isFetching = false

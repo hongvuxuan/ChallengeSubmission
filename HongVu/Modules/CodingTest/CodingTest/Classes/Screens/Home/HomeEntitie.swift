@@ -16,9 +16,15 @@ public class HomeEntities {
         var isFetching = false
     }
     
+    struct Category {
+        var type: NewsAPI.CategoriesSupported
+        var selected: Bool
+    }
+    
     var entryEntity: TestEntity
     var articlesRepositories: [ArticleRepository] = []
     var articlesAPIState = ArticlesAPIState()
+    var category: NewsAPI.CategoriesSupported = .general
     
     init(entryEntity: TestEntity) {
         self.entryEntity = entryEntity

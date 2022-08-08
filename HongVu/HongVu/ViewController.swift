@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Hong Vu's iOS Test"
+        title = "iOS Test"
     }
 }
 
@@ -53,9 +53,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
         case 0:
-            MainRouterInput().present(from: self, entryEntity: TestEntity(type: .test1))
+            MainRouterInput().push(from: self, entryEntity: TestEntity(type: .test1))
         case 1:
-            HomeRouterInput().present(from: self, entryEntity: TestEntity(type: .test2))
+            HomeRouterInput().push(from: self, entryEntity: TestEntity(type: .test2))
         default:
             break
         }

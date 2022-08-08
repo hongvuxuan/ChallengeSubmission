@@ -10,12 +10,15 @@ import VIPER
 
 protocol HomeViewInputs: AnyObject {
     func configure(entities: HomeEntities)
+    func reloadCategories(_ categories: [HomeEntities.Category])
     func reloadTableView(tableViewDataSource: HomeTableViewDataSource)
     func indicatorView(animate: Bool)
 }
 
 protocol HomeViewOutputs: AnyObject {
     func viewDidLoad()
+    func openCategory()
+    func selectCategory(_ category: NewsAPI.CategoriesSupported)
     func onReachBottom()
 }
 
@@ -38,9 +41,16 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let categoryButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(categoryAction(_:)))
+        self.navigationItem.rightBarButtonItem = categoryButton
+        
         let bundle = Bundle(for: HomeTableViewCell.self)
         tableView?.register(UINib(nibName: "HomeTableViewCell", bundle: bundle), forCellReuseIdentifier: "HomeTableViewCell")
         presenter?.viewDidLoad()
+    }
+    
+    @objc private func categoryAction(_ sender: UIBarButtonItem) {
+        presenter?.openCategory()
     }
 }
 
@@ -48,6 +58,18 @@ extension HomeViewController: HomeViewInputs {
     
     func configure(entities: HomeEntities) {
         navigationItem.title = entities.title
+    }
+    
+    func reloadCategories(_ categories: [HomeEntities.Category]) {
+        let categoryVC = CategoryViewController(withItems: categories)
+        categoryVC.delegate = self
+        categoryVC.modalPresentationStyle = .popover
+        categoryVC.popoverPresentationController?.permittedArrowDirections = .up
+        categoryVC.popoverPresentationController?.sourceView = self.view
+        categoryVC.popoverPresentationController?.sourceRect = CGRect(x: view.bounds.midX, y: view.bounds.minY, width: 0, height: 0)
+        categoryVC.popoverPresentationController?.delegate = self
+        let navController = UINavigationController(rootViewController: categoryVC)
+        present(navController, animated: true, completion: nil)
     }
     
     func reloadTableView(tableViewDataSource: HomeTableViewDataSource) {
@@ -70,7 +92,6 @@ extension HomeViewController: HomeViewInputs {
                                                         left: 0,
                                                         bottom: bottom,
                                                         right: 0)
-            
         }
     }
 }
@@ -105,6 +126,18 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         }
         presenter?.onReachBottom()
     }
+}
+
+extension HomeViewController: CategoryViewControllerDelegate {
+    
+    func category(_ vc: CategoryViewController, didSelect item: HomeEntities.Category) {
+        presenter?.selectCategory(item.type)
+        vc.dismiss(animated: true)
+    }
+}
+
+extension HomeViewController: UIPopoverPresentationControllerDelegate {
+    
 }
 
 extension HomeViewController: ViewProtocol {}
