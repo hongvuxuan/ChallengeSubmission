@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="CodingTest" customModuleProvider="target">
             <connections>
                 <outlet property="indicatorView" destination="lOL-qE-dto" id="PcL-12-q2x"/>
+                <outlet property="searchBar" destination="ybk-yA-Khg" id="LaK-hq-NHc"/>
                 <outlet property="tableView" destination="Lrf-dJ-jsv" id="H9i-zE-4hE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Lrf-dJ-jsv">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="95" width="414" height="767"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <activityIndicatorView key="tableFooterView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" id="lOL-qE-dto">
                         <rect key="frame" x="0.0" y="861" width="414" height="44"/>
@@ -33,16 +34,26 @@
                         <outlet property="delegate" destination="-1" id="xro-F9-OBc"/>
                     </connections>
                 </tableView>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ybk-yA-Khg">
+                    <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="trh-Hd-nEU"/>
+                    </connections>
+                </searchBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="ybk-yA-Khg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="43R-Fs-0vP"/>
+                <constraint firstItem="Lrf-dJ-jsv" firstAttribute="top" secondItem="ybk-yA-Khg" secondAttribute="bottom" id="5Ci-Yu-zwI"/>
+                <constraint firstItem="ybk-yA-Khg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="EeW-VH-5Wi"/>
+                <constraint firstItem="ybk-yA-Khg" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="FE5-Nc-YMy"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lrf-dJ-jsv" secondAttribute="trailing" id="GAd-dn-Mja"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Lrf-dJ-jsv" secondAttribute="bottom" id="O9X-Dx-5M4"/>
                 <constraint firstItem="Lrf-dJ-jsv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kzr-FG-6gy"/>
-                <constraint firstItem="Lrf-dJ-jsv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uZ5-Nb-SSb"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="68"/>
+            <point key="canvasLocation" x="137.68115942028987" y="67.633928571428569"/>
         </view>
     </objects>
     <resources>

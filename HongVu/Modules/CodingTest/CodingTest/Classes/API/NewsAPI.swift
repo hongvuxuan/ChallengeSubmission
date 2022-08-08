@@ -69,12 +69,7 @@ struct NewsAPI {
             }
         }
         let apiKey: String = NewsAPI.apiKey
-//        let q: String
-//        let from: String
-//        let to: String
         let sortBy: String = "popularity"
-//        let pageSize: Int
-//        let page: Int
         
         func params() -> [(key: String, value: String)] {
             switch endpointType {
@@ -90,8 +85,7 @@ struct NewsAPI {
                 return [
                     (key: "apiKey", value: apiKey),
                     (key: "q", value: q ?? ""),
-                    //(key: "from", value: from),
-                    //(key: "to", value: to),
+                    (key: "searchIn", value: "title"),
                     (key: "sortBy", value: "popularity"),
                     (key: "pageSize", value: "\(pageSize)"),
                     (key: "page", value: "\(page)"),

@@ -49,6 +49,19 @@ extension HomePresenter: HomeViewOutputs {
         onReachBottom()
     }
     
+    func search(text: String?) {
+        print("Search with keyword: \(text ?? "")")
+        if let mText = text, !mText.isEmpty {
+            entities.articlesRepositories = []
+            entities.articlesAPIState.pageCount = 1
+            view.reloadTableView(tableViewDataSource: HomeTableViewDataSource(entities: entities, presenter: self))
+            
+            dependencies.interactor.fetchArticles(.everything(q: text, pageSize: 10, page: entities.articlesAPIState.pageCount))
+        } else {
+            selectCategory(entities.category)
+        }
+    }
+    
     func onItemSelected(at indexPath: IndexPath) {
         
     }

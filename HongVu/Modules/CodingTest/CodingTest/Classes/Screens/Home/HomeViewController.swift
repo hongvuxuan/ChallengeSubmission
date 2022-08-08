@@ -20,15 +20,20 @@ protocol HomeViewOutputs: AnyObject {
     func openCategory()
     func selectCategory(_ category: NewsAPI.CategoriesSupported)
     func onReachBottom()
+    func search(text: String?)
 }
 
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView?
     @IBOutlet weak var indicatorView: UIActivityIndicatorView?
+    @IBOutlet weak var searchBar: UISearchBar?
 
     var presenter: HomeViewOutputs?
     var tableViewDataSource: TableViewItemDataSource?
+    
+    private var searchText: String?
+    private var autoSearchMng: AutoSearchManager?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -47,10 +52,19 @@ class HomeViewController: UIViewController {
         let bundle = Bundle(for: HomeTableViewCell.self)
         tableView?.register(UINib(nibName: "HomeTableViewCell", bundle: bundle), forCellReuseIdentifier: "HomeTableViewCell")
         presenter?.viewDidLoad()
+        
+        searchBar?.returnKeyType = .done
+        autoSearchMng = AutoSearchManager(callback: { [weak self] _ in
+            self?.autoSearchAction()
+        })
     }
     
     @objc private func categoryAction(_ sender: UIBarButtonItem) {
         presenter?.openCategory()
+    }
+    
+    func autoSearchAction() {
+        presenter?.search(text: searchText)
     }
 }
 
@@ -138,6 +152,24 @@ extension HomeViewController: CategoryViewControllerDelegate {
 
 extension HomeViewController: UIPopoverPresentationControllerDelegate {
     
+}
+
+extension HomeViewController: UISearchBarDelegate {
+    
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        return true
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.searchText = searchText
+        autoSearchMng?.activate()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        view.endEditing(true)
+        self.searchText = nil
+        autoSearchMng?.cancel()
+    }
 }
 
 extension HomeViewController: ViewProtocol {}
