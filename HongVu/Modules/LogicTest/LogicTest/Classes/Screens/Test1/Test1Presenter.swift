@@ -46,7 +46,7 @@ extension Test1Presenter: Test1ViewOutputs {
                 }
             }
             
-            if arrayInt.count <= 1 {
+            if arrayInt.isEmpty {
                 isError = true
             }
             

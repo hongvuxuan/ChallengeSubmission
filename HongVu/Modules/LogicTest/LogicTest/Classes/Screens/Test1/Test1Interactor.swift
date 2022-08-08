@@ -27,6 +27,10 @@ public class Test1Interactor: InteracterProtocol {
         
         let count = array.count
         
+        if count <= 1 {
+            presenter?.onResultFindTheMiddleIndex(index: 0, value: array[0])
+            return
+        }
         // Forming prefix sum array from 0
         var prefixSum = Array(repeating: 0, count: count)
         prefixSum[0] = array[0]
