@@ -46,6 +46,10 @@ extension Test1Presenter: Test1ViewOutputs {
                 }
             }
             
+            if arrayInt.count <= 1 {
+                isError = true
+            }
+            
             if isError {
                 dependencies.router.showPopup(message: "Your array of the numbers is incorrect. Please try again.")
                 view.showResult(Test1Result.failure(message: ""))
