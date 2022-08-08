@@ -2,66 +2,64 @@
 //  DetailViewController.swift
 //  CodingTest
 //
-//  Created by Hong Vu Xuan on 12/05/2022.
+//  Created by Hong Vu Xuan on 13/05/2022.
 //
 
 import UIKit
-import WebKit
 import VIPER
 
 protocol DetailViewInputs: AnyObject {
     func configure(entities: DetailEntities)
-    func requestWebView(with request: URLRequest)
-    func indicatorView(animate: Bool)
 }
 
 protocol DetailViewOutputs: AnyObject {
     func viewDidLoad()
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!)
 }
 
 class DetailViewController: UIViewController {
-    
-    @IBOutlet private weak var indicatorView: UIActivityIndicatorView?
-    @IBOutlet private weak var webView: WKWebView?
-    
+    @IBOutlet weak var newsImageView: UIImageView!
+    @IBOutlet weak var sourceLabel: UILabel!
+    @IBOutlet weak var newsTitleLabel: UILabel!
+    @IBOutlet weak var newsPublishedAtLabel: UILabel!
+    @IBOutlet weak var newsDescriptionLabel: UILabel!
+    @IBOutlet weak var newsContentLabel: UILabel!
+    @IBOutlet weak var backButton: UIButton!
     internal var presenter: DetailViewOutputs?
-
+    private var article: ArticleRepository?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        webView?.navigationDelegate = self
-        
+
         presenter?.viewDidLoad()
     }
 }
 
-extension DetailViewController: WKNavigationDelegate {
-    
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        presenter?.webView(webView, didFinish: navigation)
-    }
-}
+extension DetailViewController: ViewProtocol {}
 
 extension DetailViewController: DetailViewInputs {
     
     func configure(entities: DetailEntities) {
-        title = entities.title
-    }
-    
-    func requestWebView(with request: URLRequest) {
-        webView?.load(request)
-    }
-
-    func indicatorView(animate: Bool) {
-        DispatchQueue.main.async { [weak self] in
-            if animate {
-                self?.indicatorView?.startAnimating()
-            } else {
-                self?.indicatorView?.stopAnimating()
+        newsImageView.downloadImageWithCaching(with: entities.entryEntity.articleRepository.urlToImage ?? "", placeholderImage: nil) { [weak self] in
+            UIView.animate(withDuration: 1.0) {
+                self?.newsImageView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
             }
         }
+        
+        let tapGesture = UITapGestureRecognizer()
+        tapGesture.addTarget(self, action: #selector(openSourceUrl))
+        sourceLabel.isUserInteractionEnabled = true
+        sourceLabel.addGestureRecognizer(tapGesture)
+        let articleRepository = entities.entryEntity.articleRepository
+        sourceLabel.attributedText = NSAttributedString(string: articleRepository.source?.name ?? "", attributes: [.foregroundColor: UIColor.white, .font: UIFont.systemFont(ofSize: 16.0), .underlineStyle: NSUnderlineStyle.single.rawValue])
+        newsTitleLabel.text = articleRepository.title
+        newsPublishedAtLabel.text = articleRepository.getPublishedAtString()
+        newsDescriptionLabel.text = articleRepository.description
+        newsContentLabel.text = articleRepository.content
+        self.article = articleRepository
+    }
+    
+    @objc func openSourceUrl() {
+        guard let url = URL(string: article?.url ?? "") else { return }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 }
-
-extension DetailViewController: ViewProtocol {}

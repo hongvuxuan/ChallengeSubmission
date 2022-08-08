@@ -10,7 +10,7 @@ import Kingfisher
 
 extension UIImageView {
     
-    public func downloadImageWithCaching(with url: String,placeholderImage: UIImage? = nil){
+    public func downloadImageWithCaching(with url: String,placeholderImage: UIImage? = nil, completion: (() -> Void)? = nil) {
         if url == ""{
             self.image = placeholderImage
             return
@@ -21,7 +21,7 @@ extension UIImageView {
         }
         self.kf.setImage(with: imageURL, placeholder: placeholderImage, options: [.transition(.fade(0.1))], progressBlock: nil, completionHandler: { (image, error, cacheType, _url) in
             //self.image = image
+            completion?()
         })
     }
-    
 }

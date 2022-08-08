@@ -10,7 +10,7 @@ import Foundation
 struct NewsAPI {
     
     private static var baseURL = "https://newsapi.org/"
-    private static var apiKey = "96b3b5505731463899cd409a2f68dc71"
+    private static var apiKey = "55634192b82948888de6be3354230be2"
     
     private static var countriesSupported = ["ae", "ar", "at", "au", "be", "bg", "br", "ca", "ch", "cn", "co", "cu", "cz", "de", "eg", "fr", "gb", "gr", "hk", "hu", "id", "ie", "il", "in", "it", "jp", "kr", "lt", "lv", "ma", "mx", "my", "ng", "nl", "no", "nz", "ph", "pl", "pt", "ro", "rs", "ru", "sa", "se", "sg", "si", "sk", "th", "tr", "tw", "ua", "us", "ve", "za"]
     

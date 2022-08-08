@@ -29,18 +29,8 @@ class DetailPresenter: PresenterProtocol {
 }
 
 extension DetailPresenter: DetailViewOutputs {
-    
     func viewDidLoad() {
         view.configure(entities: entities)
-        if let url = URL(string: entities.entryEntity.articleRepository.url ?? "") {
-            let urlRequest = URLRequest(url: url)
-            view.requestWebView(with: urlRequest)
-            view.indicatorView(animate: true)
-        }
-    }
-    
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        view.indicatorView(animate: false)
     }
 }
 

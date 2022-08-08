@@ -16,4 +16,9 @@ struct ArticleRepository: Codable {
     var urlToImage: String?
     var publishedAt: String?
     var content: String?
+    
+    func getPublishedAtString() -> String {
+        let date = (publishedAt ?? "").date(format: "yyyy-MM-dd'T'HH:mm:ssZ") ?? Date()
+        return date.string(format: "dd MMM yyyy, HH:mm:ss")
+    }
 }
